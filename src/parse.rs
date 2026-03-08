@@ -313,6 +313,8 @@ impl Environment for DefaultEnvironment {
             "asinh" => Some(1),
             "acosh" => Some(1),
             "atanh" => Some(1),
+            "ceil" => Some(1),
+            "floor" => Some(1),
             _ => None,
         }
     }
@@ -347,6 +349,8 @@ impl Environment for DefaultEnvironment {
             "asinh" => args[0].asinh(),
             "acosh" => args[0].acosh(),
             "atanh" => args[0].atanh(),
+            "ceil" => args[0].ceil(),
+            "floor" => args[0].floor(),
             // "tan" => Ok(Value::Float(args[0].as_float().tan())),
             _ => Err(CalcError::UnknownAtom(atom.to_owned())),
         }

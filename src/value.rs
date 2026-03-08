@@ -336,6 +336,18 @@ impl Value {
         let float_val: f64 = self.try_into()?;
         float_val.atanh().try_into()
     }
+
+    /// Computes the ceiling of a number
+    pub fn ceil(&self) -> Result<Self, CalcError> {
+        let float_val: f64 = self.try_into()?;
+        float_val.ceil().try_into()
+    }
+
+    /// Computes the floor of a number
+    pub fn floor(&self) -> Result<Self, CalcError> {
+        let float_val: f64 = self.try_into()?;
+        float_val.floor().try_into()
+    }
 }
 
 impl fmt::Display for Value {
